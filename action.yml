@@ -1,0 +1,21 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  TWILIO_ACCOUNT_SID:  # id of input
+    description: 'Twilio Account SID found in Twilio console.'
+    required: true
+  TWILIO_AUTH_TOKEN:
+    description: 'Twilio Auth Token found in Twilio console'
+    required: true
+  TWILIO_PHONE_NUMBER:
+    description: 'Twilio phone number to send messages from.'
+    required: true
+  PHONE_NUMBER:
+    description: 'Phone number to send messages to.'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
