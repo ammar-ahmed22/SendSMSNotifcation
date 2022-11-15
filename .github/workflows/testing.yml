@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Testing inputs and date step
         id: test
-        uses: ammar-ahmed22/SendSMSNotification@v0.1
+        uses: ammar-ahmed22/SendSMSNotification@v0.1-beta
         with:
           TWILIO_ACCOUNT_SID: ACf80c616f4b97a717008eaa0ff7cd8423
           TWILIO_AUTH_TOKEN: 7f479a20f15bf98b52bd9a8171c75036

@@ -1,7 +1,7 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  TWILIO_ACCOUNT_SID:  # id of input
+  TWILIO_ACCOUNT_SID:
     description: 'Twilio Account SID found in Twilio console.'
     required: true
   TWILIO_AUTH_TOKEN:
