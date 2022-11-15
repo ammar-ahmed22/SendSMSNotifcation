@@ -16,8 +16,6 @@ try {
   const client = require("twilio")(inputs.TWILIO_ACCOUNT_SID, inputs.TWILIO_AUTH_TOKEN);
 
 
-  // console.log("inputs:", JSON.stringify(inputs));
-
   const dateString = new Date().toLocaleString('en-US', { timeZone: "America/New_York", month: "long", day: "numeric", year: "numeric" });
   const timeString = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" })
   const workflowName = github.context.workflow;
