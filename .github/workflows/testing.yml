@@ -1,9 +1,8 @@
 name: Testing SMS Notification
 on:
   schedule:
-    branches:
-      # Runs at 12 AM est
-      - crom: '30 18 * * *'
+    # Runs at 12 AM est
+    - crom: '30 18 * * *'
 jobs:
   test:
     name: Test Step
