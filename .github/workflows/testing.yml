@@ -2,7 +2,7 @@ name: Testing SMS Notification
 on:
   schedule:
     # Runs at 12 AM est
-    - crom: '30 18 * * *'
+    - cron: '30 18 * * *'
 jobs:
   test:
     name: Test Step
