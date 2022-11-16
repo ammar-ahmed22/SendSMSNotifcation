@@ -23,12 +23,12 @@ The message will look like this:
 ### `TWILIO_PHONE_NUMBER`
 
 **Required:** Twilio phone number to send messages from. Should be set in repository secrets. <br/>
-**Format:**`[+][country-code][number-with-area-code]`
+**Format:** `[+][country-code][number-with-area-code]`
 
 ### `PHONE_NUMBER`
 
 **Required:** Phone number to send messages to. <br/>
-**Format:**`[+][country-code][number-with-area-code]`
+**Format:** `[+][country-code][number-with-area-code]`
 
 
 ## Example usage
