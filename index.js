@@ -18,6 +18,8 @@ const github = require("@actions/github");
     for (const name in inputs){
       inputs[name] = core.getInput(name)
     }
+
+    console.log("inputs:", JSON.stringify(inputs));
   
     const client = require("twilio")(inputs.TWILIO_ACCOUNT_SID, inputs.TWILIO_AUTH_TOKEN);
   
@@ -48,6 +50,8 @@ const github = require("@actions/github");
     if (inputs.note !== ""){
       message += `\n\n${note}`
     }
+
+    console.log("sending message:\n", message);
     
   
     const response = await client.messages.create({
