@@ -27,7 +27,7 @@ const github = require("@actions/github");
     const workflowName = github.context.workflow;
     const repo = github.context.repo
 
-    const message = `✅ GitHub Action ✅\n\nName: ${workflowName}`;
+    let message = `✅ GitHub Action ✅\n\nName: ${workflowName}`;
 
     if (inputs.withDate){
       message += `\nDate: ${dateString}`
