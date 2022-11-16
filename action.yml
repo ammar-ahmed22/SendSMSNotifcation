@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Send SMS Notification with Twilio'
+description: 'Sends an SMS notification with date, time, workflow name, repo name and repo owner'
 inputs:
   TWILIO_ACCOUNT_SID:
     description: 'Twilio Account SID found in Twilio console.'
