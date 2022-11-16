@@ -48,7 +48,7 @@ const github = require("@actions/github");
     }
 
     if (inputs.note !== ""){
-      message += `\n\n${note}`
+      message += `\n\n${inputs.note}`
     }
 
     console.log("sending message:\n", message);
