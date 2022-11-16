@@ -31,19 +31,19 @@ const github = require("@actions/github");
 
     let message = `✅ GitHub Action ✅\n\nName: ${workflowName}`;
 
-    if (inputs.withDate){
+    if (inputs.withDate === "true"){
       message += `\nDate: ${dateString}`
     }
 
-    if (inputs.withTime){
+    if (inputs.withTime === "true"){
       message += `\nTime: ${timeString}`
     }
 
-    if (inputs.withRepoName){
+    if (inputs.withRepoName === "true"){
       message += `\nRepo Name: ${repo.repo}`
     }
 
-    if (inputs.withRepoOwner){
+    if (inputs.withRepoOwner === "true"){
       message += `\nRepo Owner: ${repo.owner}`
     }
 

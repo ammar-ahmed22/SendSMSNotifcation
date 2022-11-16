@@ -44,4 +44,4 @@ jobs:
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
           TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
           PHONE_NUMBER: '+14168364386'
-          note: 'Site is live at https://ammarahmed.ca'
+          note: 'Site is live at: https://ammarahmed.ca'
