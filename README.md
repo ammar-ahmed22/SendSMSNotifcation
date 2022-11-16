@@ -4,10 +4,10 @@ This action sends an SMS notification using Twilio for when other actions are co
 
 The message will look like this:
 
-> ✅ GitHub Action ✅
-> 
-> Date: November 15, 2022
-> Time: 7:01 PM
+> ✅ GitHub Action ✅<br/>
+> <br/>
+> Date: November 15, 2022<br/>
+> Time: 7:01 PM<br/>
 > Name: Deploy Website
 
 ## Inputs
@@ -22,12 +22,12 @@ The message will look like this:
 
 ### `TWILIO_PHONE_NUMBER`
 
-**Required:** Twilio phone number to send messages from. Should be set in repository secrets.
+**Required:** Twilio phone number to send messages from. Should be set in repository secrets. <br/>
 **Format:**:`[+][country-code][number-with-area-code]`
 
 ### `PHONE_NUMBER`
 
-**Required:** Phone number to send messages to. 
+**Required:** Phone number to send messages to. <br/>
 **Format:**:`[+][country-code][number-with-area-code]`
 
 
