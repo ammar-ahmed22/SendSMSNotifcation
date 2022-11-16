@@ -4,11 +4,11 @@ This action sends an SMS notification using Twilio for when other actions are co
 
 The message will look like this:
 
->> ✅ GitHub Action ✅
->> 
->> Date: November 15, 2022
->> Time: 7:01 PM
->> Name: Deploy Website
+> ✅ GitHub Action ✅
+> 
+> Date: November 15, 2022
+> Time: 7:01 PM
+> Name: Deploy Website
 
 ## Inputs
 
