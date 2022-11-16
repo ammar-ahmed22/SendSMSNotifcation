@@ -6,14 +6,42 @@ on:
   workflow_dispatch:
 jobs:
   test:
-    name: Test Step
+    name: Testing
     runs-on: ubuntu-latest
     steps:
-      - name: Testing
-        id: testing
-        uses: ammar-ahmed22/SendSMSNotification@v1.0-beta
+      - name: Testing with no options
+        id: test-no-opts
+        uses: ammar-ahmed22/SendSMSNotification@v1.1
         with:
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
           TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
           PHONE_NUMBER: '+14168364386'
+      - name: Testing without repo name and owner
+        id: test-no-repo
+        uses: ammar-ahmed22/SendSMSNotification@v1.1
+        with:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
+          PHONE_NUMBER: '+14168364386'
+          withRepoName: false
+          withRepoOwner: false
+      - name: Testing without date
+        id: test-no-date
+        uses: ammar-ahmed22/SendSMSNotification@v1.1
+        with:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
+          PHONE_NUMBER: '+14168364386'
+          withDate: false
+      - name: Testing with note
+        id: test-with-note
+        uses: ammar-ahmed22/SendSMSNotification@v1.1
+        with:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
+          PHONE_NUMBER: '+14168364386'
+          note: 'Site is live at https://ammarahmed.ca'

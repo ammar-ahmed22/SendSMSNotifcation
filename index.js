@@ -7,7 +7,12 @@ const github = require("@actions/github");
       TWILIO_ACCOUNT_SID: "",
       TWILIO_AUTH_TOKEN: "",
       TWILIO_PHONE_NUMBER: "",
-      PHONE_NUMBER: ""
+      PHONE_NUMBER: "",
+      withDate: true,
+      withTime: true,
+      withRepoName: true,
+      withRepoOwner: true,
+      note: '',
     }
   
     for (const name in inputs){
@@ -22,8 +27,28 @@ const github = require("@actions/github");
     const workflowName = github.context.workflow;
     const repo = github.context.repo
 
-  
-    const message = `✅ GitHub Action ✅\n\nDate: ${dateString}\nTime: ${timeString}\nAction Name: ${workflowName}\nRepo Name: ${repo.repo}\nRepo Owner: ${repo.owner}`
+    const message = `✅ GitHub Action ✅\n\nName: ${workflowName}`;
+
+    if (inputs.withDate){
+      message += `\nDate: ${dateString}`
+    }
+
+    if (inputs.withTime){
+      message += `\nTime: ${timeString}`
+    }
+
+    if (inputs.withRepoName){
+      message += `\nRepo Name: ${repo.repo}`
+    }
+
+    if (inputs.withRepoOwner){
+      message += `\nRepo Owner: ${repo.owner}`
+    }
+
+    if (inputs.note !== ""){
+      message += `\n\n${note}`
+    }
+    
   
     const response = await client.messages.create({
       body: message,

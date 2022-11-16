@@ -13,6 +13,26 @@ inputs:
   PHONE_NUMBER:
     description: 'Phone number to send messages to.'
     required: true
+  withDate:
+    description: 'Include date with message'
+    required: false
+    default: true
+  withTime:
+    description: 'Include time with message'
+    required: false
+    default: true
+  withRepoName:
+    description: 'Include repository name'
+    required: false
+    default: true
+  withRepoOwner:
+    description: 'Include repository owner'
+    required: false
+    default: true
+  note:
+    description: 'Additional note to include with message.'
+    required: false
+    default: ''
 outputs:
   time: # id of output
     description: 'The time we greeted you'
