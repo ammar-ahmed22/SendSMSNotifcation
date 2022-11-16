@@ -9,9 +9,9 @@ jobs:
     name: Test Step
     runs-on: ubuntu-latest
     steps:
-      - name: Testing inputs and date step
-        id: test
-        uses: ammar-ahmed22/SendSMSNotification@v0.1-beta
+      - name: Testing
+        id: testing
+        uses: ammar-ahmed22/SendSMSNotification@v1.0-beta
         with:
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
