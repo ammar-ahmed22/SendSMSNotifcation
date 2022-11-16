@@ -43,29 +43,29 @@ Phone number to send messages to. <br/>
 
 Include date in message.<br/>
 **Type:** Boolean <br/>
-**Default:**: `true`
+**Default:** `true`
 
 ### `withTime` 
 
 Include time in message.<br/>
-**Type:** Boolean
-**Default:**: `true`
+**Type:** Boolean <br/>
+**Default:** `true`
 
 ### `withRepoName` 
 
 Include repository name in message.<br/>
-**Type:** Boolean
-**Default:**: `true`
+**Type:** Boolean <br/>
+**Default:** `true`
 
 ### `withRepoOwner` 
 
 Include repository name in message.<br/>
-**Type:** Boolean
-**Default:**: `true`
+**Type:** Boolean <br/>
+**Default:** `true`
 
 ### `note`
 
-Include a note with the message
+Include a note with the message <br/>
 **Type:** String
 
 ## Example Action Usage
