@@ -20,8 +20,9 @@ const github = require("@actions/github");
     const dateString = new Date().toLocaleString('en-US', { timeZone: "America/New_York", month: "long", day: "numeric", year: "numeric" });
     const timeString = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" })
     const workflowName = github.context.workflow;
+    const repo = github.context.repo
   
-    const message = `✅ GitHub Action ✅\n\nDate: ${dateString}\nTime: ${timeString}\nName: ${workflowName}`
+    const message = `✅ GitHub Action ✅\n\nDate: ${dateString}\nTime: ${timeString}\nAction Name: ${workflowName}\nRepo Name: ${repo.name}\nRepo Owner: ${repo.owner}`
   
     const response = await client.messages.create({
       body: message,
