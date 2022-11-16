@@ -1,6 +1,5 @@
 name: Testing SMS Notification
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 jobs:
   test:
     name: Testing
