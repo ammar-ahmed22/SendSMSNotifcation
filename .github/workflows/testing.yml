@@ -1,8 +1,5 @@
 name: Testing SMS Notification
 on:
-  schedule:
-    # Runs at 12 AM est
-    - cron: '30 18 * * *'
   workflow_dispatch:
 jobs:
   test:
